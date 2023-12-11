@@ -1,13 +1,13 @@
 <?php
-	$db_host = "localhost";
-	$db_user = "rootmahasiswa";
-	$db_pass = "";
-	$db_name = "semester1";
+    $db_host = 'localhost';
+    $db_name = 'semester1';
+    $db_port = '';
+    $db_user = 'rootmahasiswa';
+    $db_pass = '';
 
-	$koneksi = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
+    $connection = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
 
-	 if(mysqli_connect_error()){
-	 	 echo "gagal melakukan koneksi ke database :" ; mysqli_connect_error
-	 	 	 ();
-	 }
+    if (mysqli_connect_error()) {
+        echo "gagal melakukan koneksi ke db_host:$db_host " + mysql_connect_error();
+    };
 ?>
